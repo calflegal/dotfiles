@@ -1,0 +1,3 @@
+Bundle 'scrooloose/nerdtree'
+Bundle 'tomasr/molokai'
+Bundle 'rking/ag.vim'

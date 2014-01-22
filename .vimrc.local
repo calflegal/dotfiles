@@ -1,0 +1,7 @@
+nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>t :CtrlP<CR>
+nnoremap <Leader>a :Ag 
+color molokai
+set guifont=Menlo\ Regular:h14
+hi Search guibg=peru guifg=wheat
+set relativenumber
