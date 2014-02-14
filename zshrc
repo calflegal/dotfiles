@@ -53,5 +53,4 @@ export EYRC=./.eyrc
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-plugins=(git osx ruby)
 

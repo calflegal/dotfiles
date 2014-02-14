@@ -1,3 +1,8 @@
 Bundle 'scrooloose/nerdtree'
 Bundle 'tomasr/molokai'
 Bundle 'rking/ag.vim'
+Bundle 'jistr/vim-nerdtree-tabs'
+
+" Additional ctags
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rake'
