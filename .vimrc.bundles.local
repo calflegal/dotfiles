@@ -6,3 +6,12 @@ Bundle 'jistr/vim-nerdtree-tabs'
 " Additional ctags
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rake'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'jgdavey/tslime.vim'
+
+
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'Lokaltog/vim-distinguished'

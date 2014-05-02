@@ -1,10 +1,10 @@
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>p :CtrlP<CR>
 nnoremap <Leader>a :Ag 
-color molokai
 set guifont=Menlo\ Regular:h14
 hi Search guibg=peru guifg=wheat
 set relativenumber
+" colorscheme distinguished
 au FocusLost * :wa
 nnoremap <Leader>f :Ag  %<C-Left><Left>
 set winwidth=84
@@ -12,3 +12,7 @@ set winheight=10
 set winminheight=10
 set winheight=999
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")' 
+noremap <Leader>h :set hlsearch! hlsearch?<CR>
+map <Leader>e <Plug>(easymotion-prefix)
+set pastetoggle=<F6>
