@@ -131,16 +131,9 @@ nnoremap <C-l> <C-w>l
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
-<<<<<<< HEAD
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_eruby_checkers = ['jshint', 'ruby']
 
-" jshint validation
- nnoremap <silent><Leader>j :JSHint<CR>
- inoremap <silent><Leader>j <C-O>:JSHint<CR>
- vnoremap <silent><Leader>j :JSHint<CR>
-"
-=======
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let g:syntastic_eruby_ruby_quiet_messages =
     \ {"regex": "possibly useless use of a variable in void context"}
@@ -154,7 +147,6 @@ set complete+=kspell
 
 " Always use vertical diffs
 set diffopt+=vertical
->>>>>>> thoughtbot/master
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
