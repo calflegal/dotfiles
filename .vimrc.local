@@ -16,3 +16,4 @@ let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 noremap <Leader>h :set hlsearch! hlsearch?<CR>
 map <Leader>e <Plug>(easymotion-prefix)
 set pastetoggle=<F6>
+set clipboard=unnamed
