@@ -8,9 +8,6 @@ Plug 'vim-scripts/ctags.vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'vim-airline/vim-airline'
-<<<<<<< HEAD
-=======
 Plug 'derekprior/vim-trimmer'
 Plug 'svermeulen/vim-easyclip'
->>>>>>> cb3a625a3104ef7596d1525c769718d40776be40
 Plug 'mtscout6/syntastic-local-eslint.vim'
