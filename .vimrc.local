@@ -1,6 +1,6 @@
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>p :CtrlP<CR>
-nnoremap <Leader>a :Ag 
+nnoremap <Leader>a :Ag
 set guifont=Menlo\ Regular:h14
 hi Search guibg=peru guifg=wheat
 set relativenumber
@@ -12,9 +12,13 @@ set winheight=10
 set winminheight=10
 set winheight=999
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")' 
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 noremap <Leader>h :set hlsearch! hlsearch?<CR>
 map <Leader>e <Plug>(easymotion-prefix)
 set pastetoggle=<F6>
 set clipboard=unnamed
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
+" move mark to gm for easyClip
+nnoremap gm m
+let g:trimmer_blacklist = ['markdown', 'make']
 let g:syntastic_javascript_checkers = ['eslint']
