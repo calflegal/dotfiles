@@ -17,3 +17,4 @@ noremap <Leader>h :set hlsearch! hlsearch?<CR>
 map <Leader>e <Plug>(easymotion-prefix)
 set pastetoggle=<F6>
 set clipboard=unnamed
+let g:syntastic_javascript_checkers = ['eslint']
