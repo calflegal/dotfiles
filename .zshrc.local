@@ -1,0 +1,2 @@
+source ~/dotfiles/favdir.sh
+export PATH="$PATH:$HOME/go/bin:/usr/local/opt/python@2/bin"
