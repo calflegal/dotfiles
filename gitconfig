@@ -13,7 +13,7 @@
   pf = push --force-with-lease
   st = status
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/calvinf/.gitignore_global
   autocrlf = input
 [merge]
 [commit]
@@ -29,6 +29,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 [user]
-	email = calvin.flegal@gmail.com
+	email = calvinf@spotify.com
 	name = Calvin Flegal

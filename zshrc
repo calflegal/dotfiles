@@ -45,9 +45,22 @@ _load_settings "$HOME/.zsh/configs"
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
+<<<<<<< HEAD
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/Library/Python/3.6/bin"
 export PATH="$PATH:/Library/PostgreSQL/9.6/bin"
+=======
+PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+PATH="$PATH:$HOME/Library/Python/3.6/bin"
+PATH="$PATH:/usr/local/Cellar/php56/5.6.31_7/bin"
+PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+export PATH="$PATH:/usr/local/Cellar/php56/5.6.31_7/bin"
+>>>>>>> d0ec6236e8e77350fc456c10b2ed18e5f97b8ea3
 
 export NVM_DIR="$HOME/.nvm"
+export GCLOUD_CREDENTIALS=/Users/calvinf/.config/gcloud/credentials
+
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
