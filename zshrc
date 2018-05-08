@@ -10,6 +10,7 @@ _load_settings() {
   if [ -d "$_dir" ]; then
     if [ -d "$_dir/pre" ]; then
       for config in "$_dir"/pre/**/*(N-.); do
+        if [ ${config:e} = "zwc" ] ; then continue ; fi
         . $config
       done
     fi
@@ -23,7 +24,7 @@ _load_settings() {
           :
           ;;
         *)
-          if [ -f $config ]; then
+          if [[ -f $config && ${config:e} != "zwc" ]]; then
             . $config
           fi
           ;;
@@ -32,6 +33,7 @@ _load_settings() {
 
     if [ -d "$_dir/post" ]; then
       for config in "$_dir"/post/**/*(N-.); do
+        if [ ${config:e} = "zwc" ] ; then continue ; fi
         . $config
       done
     fi
@@ -39,25 +41,8 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
-# aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
-
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/Library/Python/3.6/bin"
-export PATH="$PATH:/Library/PostgreSQL/9.6/bin"
-PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-PATH="$PATH:$HOME/Library/Python/3.6/bin"
-PATH="$PATH:/usr/local/Cellar/php56/5.6.31_7/bin"
-PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-export PATH="$PATH:/usr/local/Cellar/php56/5.6.31_7/bin"
-
-export NVM_DIR="$HOME/.nvm"
-export GCLOUD_CREDENTIALS=/Users/calvinf/.config/gcloud/credentials
-
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
