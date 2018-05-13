@@ -13,7 +13,7 @@
   pf = push --force-with-lease
   st = status
 [core]
-	excludesfile = /Users/calvinf/.gitignore_global
+	excludesfile = /Users/hcalvinflegal/.gitignore
   autocrlf = input
 [merge]
 [commit]
