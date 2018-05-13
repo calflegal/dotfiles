@@ -1,6 +1,11 @@
 thoughtbot dotfiles
 ===================
 
+For Cal's setup
+--------------
+- make symlink from ~/dotfiles-local to ~/dotfiles/dotfiles-local/
+- install oh-my-zsh 
+
 ![prompt](http://images.thoughtbot.com/thoughtbot-dotfiles-prompt.png)
 
 Requirements
