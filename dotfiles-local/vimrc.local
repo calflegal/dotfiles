@@ -25,18 +25,20 @@ let g:jsx_ext_required = 0
 " Set the type for the file type and override if file type
 " " already has detected
 au BufRead,BufNewFile *.ngt set syntax=html
-" let syntasic populate error list
-let g:syntastic_always_populate_loc_list = 1
-" configure syntastic syntax checking to check on open as well as save
-let g:syntastic_check_on_open=1
-let g:syntastic_javascript_checkers = ['eslint']
-" let neoformat run global prettier on save
-autocmd BufWritePre *.js Neoformat
 " Ignore some folders and files for CtrlP indexing
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers['elixir'] = ['mix_format']
 let g:ale_linters = {
-\   'elixir': ['credo'],
+\   'elixir': ['dialyxir'],
 \}
+" Set this setting in vimrc if you want to fix files automatically on save.
+" This is off by default.
+let g:ale_fix_on_save = 1
+
+let g:ale_javascript_prettier_use_local_config = 1
+
