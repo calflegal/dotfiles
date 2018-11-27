@@ -1,6 +1,6 @@
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>p :CtrlP<CR>
-nnoremap <Leader>a :Ag
+nnoremap <Leader>a :Ag!<Space>
 set guifont=Menlo\ Regular:h14
 hi Search guibg=peru guifg=wheat
 set relativenumber
