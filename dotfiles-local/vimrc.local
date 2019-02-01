@@ -31,14 +31,25 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
 let g:ale_fixers = {}
+let g:ale_linters = {}
 let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers['typescript'] = ['prettier']
 let g:ale_fixers['elixir'] = ['mix_format']
-let g:ale_linters = {
-\   'elixir': ['dialyxir'],
-\}
+let g:ale_linters['elixir'] = ['mix']
+let g:ale_linters['typescript'] = ['tsserver']
 " Set this setting in vimrc if you want to fix files automatically on save.
 " This is off by default.
 let g:ale_fix_on_save = 1
 
 let g:ale_javascript_prettier_use_local_config = 1
 nmap <silent> <Leader>l <Plug>(ale_next_wrap)
+let g:airline_section_b = ""
+" Start autocompletion after 4 chars
+let g:ycm_min_num_of_chars_for_completion = 4
+let g:ycm_min_num_identifier_candidate_chars = 4
+let g:ycm_enable_diagnostic_highlighting = 0
+" Don't show YCM's preview window [ I find it really annoying ]
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+nnoremap gD :YcmCompleter GoToDeclaration<CR>
+nnoremap gF :YcmCompleter GoToDeclaration<CR>
