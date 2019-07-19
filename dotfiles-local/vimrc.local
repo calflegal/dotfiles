@@ -32,11 +32,12 @@ let g:ctrlp_custom_ignore = {
   \ }
 let g:ale_fixers = {}
 let g:ale_linters = {}
+let g:ale_linters['javascript'] = ['eslint']
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fixers['typescript'] = ['prettier']
 let g:ale_fixers['elixir'] = ['mix_format']
 let g:ale_linters['elixir'] = ['mix']
-let g:ale_linters['typescript'] = ['tsserver']
+let g:ale_linters['typescript'] = ['tsserver', 'eslint']
 " Set this setting in vimrc if you want to fix files automatically on save.
 " This is off by default.
 let g:ale_fix_on_save = 1
@@ -53,3 +54,6 @@ set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 nnoremap gD :YcmCompleter GoToDeclaration<CR>
 nnoremap gF :YcmCompleter GoToDeclaration<CR>
+" option+t
+let g:AutoPairsShortcutToggle = '†'
+
