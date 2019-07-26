@@ -54,6 +54,9 @@ set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 nnoremap gD :YcmCompleter GoToDeclaration<CR>
 nnoremap gF :YcmCompleter GoToDeclaration<CR>
-" option+t
-let g:AutoPairsShortcutToggle = '†'
+" option+p
+let g:AutoPairsShortcutToggle = 'π'
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.tsx"
+
+
 
