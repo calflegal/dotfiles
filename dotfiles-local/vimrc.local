@@ -42,6 +42,9 @@ let g:ale_linters['typescript'] = ['tsserver', 'eslint']
 " This is off by default.
 let g:ale_fix_on_save = 1
 
+" so ale knows tsx is typescript
+let g:ale_linter_aliases = {'typescriptreact': 'typescript'}
+
 let g:ale_javascript_prettier_use_local_config = 1
 nmap <silent> <Leader>l <Plug>(ale_next_wrap)
 let g:airline_section_b = ""
@@ -53,10 +56,13 @@ let g:ycm_enable_diagnostic_highlighting = 0
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 nnoremap gD :YcmCompleter GoToDeclaration<CR>
-nnoremap gF :YcmCompleter GoToDeclaration<CR>
+nnoremap gI :YcmCompleter GoToImplementation<CR>
 " option+p
 let g:AutoPairsShortcutToggle = 'π'
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.tsx"
 
+" Open definition in new vertical split
+map <leader>ds :vsp <CR>:exec("YcmCompleter GoToDefinitionElseDeclaration")<CR>
 
+map <leader>fi :YcmCompleter FixIt<CR>
 

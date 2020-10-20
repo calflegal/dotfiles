@@ -4,4 +4,8 @@ alias listeners='lsof -Pn -i4'
 # Notice the --rm flag, this ensures that each time you dokku some-command the container that is spun up on the remote server is one-time and is removed after your command completes, like Heroku one-off dynos. I was bitten by this when I ended up with dozens of containers running eventually, not understanding where they were coming from. */
 alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh --rm'
 alias ctags="`brew --prefix`/bin/ctags"
+# grep hist
+alias hg="fc -El 0 | grep"
+alias g="grep"
+alias jf="jfaves"
 
