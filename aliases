@@ -16,6 +16,6 @@ alias s="rspec"
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # Include custom aliases
-[[ -f ~/.aliases.local ]] && source ~/.aliases.local
-alias tu="cd Developer/react/tuneup-web"
-alias deployTune="npm run build && aws s3 sync build/ s3://tuning-game"
+if [[ -f ~/.aliases.local ]]; then
+  source ~/.aliases.local
+fi

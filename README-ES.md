@@ -124,7 +124,7 @@ Para extender tus `git` hooks, crea scripts ejecutables en
 Tu `~/dotfiles-local/zshrc.local` tal vez se vea así:
 
     # load pyenv if available
-    if which pyenv &>/dev/null ; then
+    if command -v pyenv &>/dev/null ; then
       eval "$(pyenv init -)"
     fi
 
@@ -177,12 +177,12 @@ sin importar de nombre del archivo:
     set cinoptions=:0,t0,+4,(4
     autocmd BufNewFile,BufRead *.[ch] setlocal sw=0 ts=8 noet
 
-Qué tiene dentro?
+¿Qué viene incluido?
 -----------------
 
 Configuración [vim](http://www.vim.org/):
 
-* [Ctrl-P](https://github.com/ctrlpvim/ctrlp.vim) para hallazgo difuso de archivos/buffer/tags.
+* [fzf](https://github.com/junegunn/fzf.vim) para hallazgo difuso de archivos/buffer/tags.
 * [Rails.vim](https://github.com/tpope/vim-rails) para una mejor navegación de la estructura
 de archivos de Rails via `gf` y `:A` (alterno), `:Rextract` parciales,`:Rinvert` migraciones, etc.
 * Ejecuta muchos tipos de pruebas [desde vim]([https://github.com/janko-m/vim-test)
